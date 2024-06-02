@@ -1,0 +1,31 @@
+<mat-card>
+    <mat-card-content>
+      <form [formGroup] = "loginForm"  (ngSubmit) = "loginSubmited()" *ngIf = "nonMember">
+        <h2>Sign In</h2>
+        <mat-error *ngIf="!loginValid">
+          The username and password were not recognized
+        </mat-error>
+        <mat-form-field>
+          <input matInput type="EMAIL" placeholder="EMAIL" formControlName="EMAIL" id = "EMAIL" 
+          name = "EMAIL" required>
+          <mat-error>
+            Please provide a valid email address
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput type="PASSWORD" placeholder="PASSWORD" formControlName="PASSWORD" id="PASSWORD" 
+          name = "PASSWORD"  required>
+          <mat-error>
+            Please provide a valid password
+          </mat-error>
+        </mat-form-field>
+        <br>
+        <button mat-raised-button color="primary" [disabled]="loginForm.invalid" >Login</button>
+      </form>
+
+      <form [formGroup] = "loginForm" (ngSubmit) = "logoutSubmited()" *ngIf = "!nonMember">
+            <h4>{{displayEmail}}, signed in</h4>
+        <button mat-raised-button color="primary">Logout</button>
+      </form>
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,31 @@
+<mat-drawer-container #containerChart id = "containerChart" class="example-container" [hasBackdrop]="false">
+
+    <mat-table matSort [dataSource] = "dataSource">
+        <ng-container matColumnDef="Position">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>No.</mat-header-cell>
+              <mat-cell *matCellDef="let element">{{element.Position}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="Dataset">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Dataset</mat-header-cell>
+              <mat-cell *matCellDef="let element">{{element.Dataset}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="Description">
+              <mat-header-cell *matHeaderCellDef  mat-sort-header>Description</mat-header-cell>
+              <mat-cell *matCellDef="let element">{{element.Description}}</mat-cell>
+        </ng-container>
+        
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns:displayedColumns;"></mat-row>
+    
+        <ng-container matColumnDef="Options">
+          <mat-header-cell *matHeaderCellDef>Download (.xlsx)</mat-header-cell>
+        <mat-cell *matCellDef="let row">
+              <button mat-icon-button color="warn" (click)="onDowload(row.Dataset)">
+                  <mat-icon>cloud_download</mat-icon>
+              </button>
+        </mat-cell>
+        </ng-container>
+    </mat-table>
+    
+    </mat-drawer-container>
+    

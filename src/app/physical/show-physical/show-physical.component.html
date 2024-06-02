@@ -1,0 +1,68 @@
+<mat-drawer-container #containerChart id = "containerChart" class="example-container" [hasBackdrop]="false">
+    <td>
+        <mat-form-field>
+        <mat-label>Filter table</mat-label>
+        <input matInput (keyup)="applyFilter($event)"  placeholder="Keyword search">  
+        </mat-form-field>
+    </td>
+    <td>
+            <button mat-raised-button (click) = "onAdd()" color="primary">Add</button>
+    </td>
+    
+
+
+  <mat-table matSort [dataSource] = "dataSource">
+    <ng-container matColumnDef="ID">
+        <mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by name">ID</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.ID}}</mat-cell>
+  </ng-container>
+    
+  <ng-container matColumnDef="TA">
+        <mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by TA">TA</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.TA}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="Total_Sulphur">
+        <mat-header-cell *matHeaderCellDef  mat-sort-header sortActionDescription="Sort by number">Total_Sulphur</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.Total_Sulphur}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="Gluc_Fruc">
+      <mat-header-cell *matHeaderCellDef  mat-sort-header sortActionDescription="Sort by number">Gluc_Fruc</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.Gluc_Fruc}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="Total_phenolics">
+      <mat-header-cell *matHeaderCellDef  mat-sort-header sortActionDescription="Sort by number">Total_phenolics</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.Total_phenolics}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="pH">
+      <mat-header-cell *matHeaderCellDef  mat-sort-header sortActionDescription="Sort by number">pH</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.pH}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="Free_Sulphur">
+      <mat-header-cell *matHeaderCellDef  mat-sort-header sortActionDescription="Sort by number">Free_Sulphur</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.Free_Sulphur}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="Ethanol">
+      <mat-header-cell *matHeaderCellDef  mat-sort-header sortActionDescription="Sort by number">Ethanol</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.Ethanol}}</mat-cell>
+  </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns:displayedColumns;"></mat-row>
+
+    <ng-container matColumnDef="Options">
+    <mat-header-cell *matHeaderCellDef>Options</mat-header-cell>
+    <mat-cell *matCellDef="let row">
+        <button mat-icon-button color="primary" (click)="onEdit(row)">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button color="warn" (click)="onDelete(row.ID)">
+            <mat-icon>delete_outline</mat-icon>
+        </button>
+    </mat-cell>
+    </ng-container>
+    </mat-table>
+
+    <mat-paginator [pageSizeOptions] = "[10,25,100]" aria-label="select page of users"></mat-paginator>
+
+</mat-drawer-container>
+
