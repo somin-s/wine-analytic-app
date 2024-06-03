@@ -10,7 +10,7 @@ import {NgForm} from '@angular/forms';
   styleUrls: ['./add-physical.component.css']
 })
 export class AddPhysicalComponent {
-  title = "Phisical data";
+  title = "Physical data";
 
   constructor(private service: ServiceService, private dialogRef: MatDialogRef<AddPhysicalComponent>,
     //  @Inject(MAT_DIALOG_DATA) public data: Metadata

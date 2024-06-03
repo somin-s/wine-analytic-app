@@ -1,10 +1,8 @@
 <mat-sidenav-container>
   <mat-sidenav-content>
     <mat-toolbar color="primary">
-     <div fxHide.gt-xs>
-       <button mat-icon-button>
-        <mat-icon>menu</mat-icon>
-      </button>
+     <div>
+      <img  class="map-frame" [src] ="grape" style="width: 60px;height: 60px;"> 
     </div>
      <div>
           Wine Analysis - Pinot Noir Nz
@@ -30,6 +28,13 @@
             </a>     
             </li>
           <li>
+          <li>
+            <a mat-menu-item routerLink="/Info" routerLinkActive = "active-link">
+              <mat-icon class="icon">photo_library</mat-icon>
+              <span  class="label">Information</span>
+            </a>     
+          </li>
+            <li>
             <div *ngIf="!signedIn">
             <a mat-menu-item routerLink="/login" routerLinkActive = "active-link">
               <mat-icon class="icon">assignment_ind</mat-icon>

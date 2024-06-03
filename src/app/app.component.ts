@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'PinotApp';
+  grape = "assets/img/grape.png";
 
   signedIn = true;
   User = "";

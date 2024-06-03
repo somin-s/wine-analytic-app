@@ -53,13 +53,13 @@ export class DashboardComponent {
       var PD: any = this.selectedQ.value;
       if (PD != "Qualities")
       {
-      this.service.getForGraph(PD).subscribe(dt=> {
-         var qData = dt.map((item, index) => ( {
-            name: [item.Vineyard],
-            data: [item.Quality/item.DIV]
-         }));
-         this.QualityChart(qData,"Qualities based on "+PD);
-         })
+         this.service.getForGraph(PD).subscribe(dt=> {
+            var qData = dt.map((item, index) => ( {
+               name: [item.Vineyard],
+               data: [item.Quality/item.DIV]
+            }));
+            this.QualityChart(qData,"Qualities based on "+PD);
+            })
       }
       else
       {

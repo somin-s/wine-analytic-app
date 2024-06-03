@@ -49,6 +49,7 @@ export class LoginComponent {
     
 
     this.http.post(this.APIUrl+'GetUserPWD',formData).subscribe(dt=>{
+      console.log("email:"+dt);
     //this.service.getUser().subscribe(dt=>{
       this.dtUserPWD = dt;
         var len = this.dtUserPWD.length;
@@ -68,26 +69,26 @@ export class LoginComponent {
         }
     });
     
-    
-    // ).subscribe(data=> {
-    //     console.log(data);
-    //     this.dtUserPWD = data;
-    //     var len = this.dtUserPWD.length;
+    this.http.get(this.APIUrl+'GetUserPWD').subscribe(dt=>{
+      console.log("email:"+dt);
+    //this.service.getUser().subscribe(dt=>{
+      this.dtUserPWD = dt;
+        var len = this.dtUserPWD.length;
 
-    //     if (len==1) {
-    //       this.loginValid = true;
-    //       this.nonMember = false;
+        if (len==1) {
+          this.loginValid = true;
+          this.nonMember = false;
 
-    //       localStorage.setItem('session', strEmail);
-    //       this.refreshScreen();
-    //       window.location.reload();
-    //       //this.redirectScreen();
-    //     }
-    //     else {
-    //       this.loginValid = false;
-    //       localStorage.setItem('session', "nonMember");
-    //     }
-    // })
+          localStorage.setItem('session', strEmail);
+          this.refreshScreen();
+          window.location.reload();
+          //this.redirectScreen();
+        }
+        else {
+          this.loginValid = false;
+          localStorage.setItem('session', "nonMember");
+        }
+    });
   }
 
   logoutSubmited() {

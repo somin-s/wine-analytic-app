@@ -41,6 +41,7 @@ import { ShowPhysicalComponent } from './physical/show-physical/show-physical.co
 import { DatasetComponent } from './dataset/dataset.component';
 import { DownloadComponent } from './download/download.component';
 import { LoginComponent } from './login/login.component';
+import { InfoComponent } from './info/info/info.component';
 
 
 @NgModule({
@@ -59,6 +60,7 @@ import { LoginComponent } from './login/login.component';
     DownloadComponent,
     LoginComponent,
     ArcGisComponent,
+    InfoComponent,
   ],
   imports: [
     BrowserModule,
