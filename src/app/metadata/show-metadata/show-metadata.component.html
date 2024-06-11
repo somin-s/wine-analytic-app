@@ -1,0 +1,68 @@
+<mat-drawer-container #containerChart id = "containerChart" class="example-container" [hasBackdrop]="false">
+    <td>
+        <mat-form-field>
+        <mat-label>Filter Table</mat-label>
+        <input matInput (keyup)="applyFilter($event)"  placeholder="Keyword search">  
+        </mat-form-field>
+    </td>
+    <td>
+            <button mat-raised-button (click) = "onAdd()" color="primary">Add</button>
+    </td>
+    
+
+
+<mat-table matSort [dataSource] = "dataSource">
+    <ng-container matColumnDef="ID">
+          <mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by name">ID</mat-header-cell>
+          <mat-cell *matCellDef="let element">{{element.ID}}</mat-cell>
+    </ng-container>
+      
+    <ng-container matColumnDef="Producer">
+          <mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by Producer">Producer</mat-header-cell>
+          <mat-cell *matCellDef="let element">{{element.Producer}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="Vineyard">
+          <mat-header-cell *matHeaderCellDef  mat-sort-header sortActionDescription="Sort by Vineyard">Vineyard</mat-header-cell>
+          <mat-cell *matCellDef="let element">{{element.Vineyard}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="Region">
+        <mat-header-cell *matHeaderCellDef  mat-sort-header sortActionDescription="Sort by Region">Region</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.Region}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="Uses">
+        <mat-header-cell *matHeaderCellDef  mat-sort-header sortActionDescription="Sort by Uses">Uses</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.Uses}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="Harvest">
+        <mat-header-cell *matHeaderCellDef  mat-sort-header sortActionDescription="Sort by Harvest">Harvest</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.Harvest}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="Yield">
+        <mat-header-cell *matHeaderCellDef  mat-sort-header sortActionDescription="Sort by Yield">Yield</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.Yield}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="Viticulture">
+        <mat-header-cell *matHeaderCellDef  mat-sort-header sortActionDescription="Sort by Viticulture">Viticulture</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.Viticulture}}</mat-cell>
+    </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns:displayedColumns;"></mat-row>
+
+      <ng-container matColumnDef="Options">
+      <mat-header-cell *matHeaderCellDef>Options</mat-header-cell>
+      <!-- <mat-cell *matCellDef="let row"(click)="onEdit(row)"> -->
+        <mat-cell *matCellDef="let row">
+          <button mat-icon-button color="primary" (click)="onEdit(row)">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button color="warn" (click)="onDelete(row.ID)">
+              <mat-icon>delete_outline</mat-icon>
+          </button>
+      </mat-cell>
+      </ng-container>
+</mat-table>
+
+<mat-paginator [pageSizeOptions] = "[10,25,100]" aria-label="select page of users"></mat-paginator>
+
+</mat-drawer-container>

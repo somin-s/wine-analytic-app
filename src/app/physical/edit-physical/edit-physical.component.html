@@ -1,0 +1,60 @@
+<h1 mat-dialog-title>{{title}}</h1>
+
+<div>
+<mat-dialog-content>
+    <form class="example-form" #form="ngForm" (ngSubmit) = "onSubmit(form)"  autocomplete="off">
+        <div>
+        <td><h1>ID:</h1></td><td><h1>{{PhysicalDetails.ID}}</h1></td>
+        </div>
+            
+        <mat-form-field>
+            <mat-label>TA</mat-label>
+            <input matInput required minlength="2" type="text" id="TA"
+            name="TA" [(ngModel)] = "PhysicalDetails.TA">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Total_Sulphur</mat-label>
+            <input matInput required minlength="2" type="text" id="Total_Sulphur"
+            name="Total_Sulphur" [(ngModel)] = "PhysicalDetails.Total_Sulphur">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Gluc_Fruc</mat-label>
+            <input matInput required minlength="2" type="text" id="Gluc_Fruc"
+            name="Gluc_Fruc" [(ngModel)] = "PhysicalDetails.Gluc_Fruc">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Total_phenolics</mat-label>
+            <input matInput required minlength="2" type="text" id="Total_phenolics"
+            name="Total_phenolics" [(ngModel)] = "PhysicalDetails.Total_phenolics">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>pH</mat-label>
+            <input matInput required minlength="2" type="text" id="pH"
+            name="pH" [(ngModel)] = "PhysicalDetails.pH">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Free_Sulphur</mat-label>
+            <input matInput required minlength="2" type="text" id="Free_Sulphur"
+            name="Free_Sulphur" [(ngModel)] = "PhysicalDetails.Free_Sulphur">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Ethanol</mat-label>
+            <input matInput required minlength="2" type="text" id="Ethanol"
+            name="Ethanol" [(ngModel)] = "PhysicalDetails.Ethanol">
+        </mat-form-field>
+
+        <button mat-raised-button type="submit" color="primary">Save</button>
+    </form>
+</mat-dialog-content>
+</div>
+<div>
+<mat-dialog-content>
+        <button mat-raised-button class="close" (click)="onCancel()" color="warn">Cancel</button>
+</mat-dialog-content>
+</div>

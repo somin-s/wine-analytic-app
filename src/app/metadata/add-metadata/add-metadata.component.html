@@ -1,0 +1,133 @@
+<h1 mat-dialog-title>{{title}}</h1>
+
+<div>
+<mat-dialog-content>
+    <form class="example-form" #form="ngForm" (ngSubmit) = "onSubmit(form)">
+        <mat-form-field>
+            <mat-label>ID</mat-label>
+            <input matInput required minlength="2" type="text" id="ID"
+            name="ID" [(ngModel)] = "addMetadataRequest.ID">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Producer abbrev</mat-label>
+            <input matInput required minlength="2" type="text" id="Producer_Abbrev"
+            name="Producer_Abbrev" [(ngModel)] = "addMetadataRequest.Producer_Abbrev">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Producer</mat-label>
+            <input matInput required minlength="2" type="text" id="Producer"
+            name="Producer" [(ngModel)] = "addMetadataRequest.Producer">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Vineyard</mat-label>
+            <input matInput required minlength="2" type="text" id="Vineyard"
+            name="Vineyard" [(ngModel)] = "addMetadataRequest.Vineyard">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Vintage</mat-label>
+            <select matNativeControl id = "Vintage" name="Vintage" [(ngModel)] = "addMetadataRequest.Vintage">
+                <option [ngValue]="2013">2013</option>
+                <option [ngValue]="2016">2016</option>
+                <option [ngValue]="2019">2019</option>
+                <option [ngValue]="2025">2025</option>
+                <option [ngValue]="2028">2028</option>
+                <option [ngValue]="2031">2031</option>
+            </select>
+        </mat-form-field>
+        <!-- <mat-form-field>
+            <mat-label>Vintage]</mat-label>
+            <input matInput required minlength="2" type="text" id="Vintage"
+            name="Vintage" [(ngModel)] = "addMetadataRequest.Vintage">
+        </mat-form-field> -->
+
+        <mat-form-field>
+            <mat-label>Region</mat-label>
+            <input matInput required minlength="2" type="text" id="Region"
+            name="Region" [(ngModel)] = "addMetadataRequest.Region">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Cost</mat-label>
+            <input matInput minlength="2" type="text" id="Cost"
+            name="Cost" [(ngModel)] = "addMetadataRequest.Cost">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Uses</mat-label>
+            <input matInput minlength="2" type="text" id="Uses"
+            name="Uses" [(ngModel)] = "addMetadataRequest.Uses">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Closure</mat-label>
+            <input matInput minlength="2" type="text" id="Closure"
+            name="Closure" [(ngModel)] = "addMetadataRequest.Closure">
+        </mat-form-field>
+
+        <mat-form-field>
+        <mat-label>Harvest</mat-label>
+            <input matInput minlength="2" type="text" id="Harvest"
+            name="Harvest" [(ngModel)] = "addMetadataRequest.Harvest">
+        </mat-form-field>
+
+        <mat-form-field>
+        <mat-label>Yield</mat-label>
+            <input matInput required minlength="2" type="text" id="Yield"
+            name="Yield" [(ngModel)] = "addMetadataRequest.Yield">
+        </mat-form-field>
+
+        <!-- <mat-form-field>
+            <mat-label>Production</mat-label>
+            <ng-container *ngFor=”let option of list1; let i = index”>
+                <input type=”radio” [value]=”option” formControlName=”fruit” />{{ option }}
+            </ng-container> -->
+        <mat-label>Production</mat-label>
+            <mat-radio-group aria-label="Select an option" name="Production" [(ngModel)] = "addMetadataRequest.Production">
+            <mat-radio-button value="high">high</mat-radio-button>
+            <mat-radio-button value="low">low</mat-radio-button>
+            </mat-radio-group>
+        <!-- </mat-form-field> -->
+
+        <mat-form-field>
+        <mat-label>Viticulture</mat-label>
+            <input matInput required minlength="2" type="text" id="Viticulture"
+            name="Viticulture" [(ngModel)] = "addMetadataRequest.Viticulture">
+        </mat-form-field>
+
+        <mat-form-field>
+        <mat-label>Quality</mat-label>
+            <input matInput required minlength="2" type="text" id="Quality"
+            name="Quality" [(ngModel)] = "addMetadataRequest.Quality">
+        </mat-form-field>
+
+        <mat-form-field>
+        <mat-label>Layer_ID</mat-label>
+            <input matInput minlength="2" type="text" id="Layer_ID"
+            name="Layer_ID" [(ngModel)] = "addMetadataRequest.Layer_ID">
+        </mat-form-field>
+
+        <mat-form-field>
+        <mat-label>Layer_ID1</mat-label>
+            <input matInput  minlength="2" type="text" id="Layer_ID1"
+            name="Layer_ID1" [(ngModel)] = "addMetadataRequest.Layer_ID1">
+        </mat-form-field>
+
+        <!-- <mat-form-field>
+        <mat-label>DIV</mat-label>
+            <input matInput  minlength="2" type="text" id="DIV"
+            name="DIV" [(ngModel)] = "addMetadataRequest.DIV">
+        </mat-form-field> -->
+
+        <button mat-raised-button type="submit" color="primary">Save</button>
+    </form>
+</mat-dialog-content>
+</div>
+<div>
+<mat-dialog-content>
+        <button mat-raised-button class="close" (click)="onCancel()" color="warn">Cancel</button>
+</mat-dialog-content>
+</div>
