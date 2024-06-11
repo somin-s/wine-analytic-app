@@ -1,5 +1,4 @@
 import { Component, computed, signal } from '@angular/core';
-
 export type MenuItem = {
   icon: string;
   label: string;
@@ -10,8 +9,6 @@ export type MenuItem = {
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-
-
 })
 export class AppComponent {
   title = 'PinotApp';
@@ -19,7 +16,7 @@ export class AppComponent {
 
   signedIn = true;
   User = "";
-
+  
   menuItems = signal<MenuItem[]>([
     {
       icon: 'dashboard',
