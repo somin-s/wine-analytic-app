@@ -16,7 +16,7 @@ export class AppComponent {
 
   signedIn = true;
   User = "";
-  
+
   menuItems = signal<MenuItem[]>([
     {
       icon: 'dashboard',
@@ -30,13 +30,18 @@ export class AppComponent {
     },
     {
       icon: 'dataset',
-      label: 'Data and Download',
+      label: 'Data and download',
       route: 'DataSet',
     },
     {
       icon: 'photo_library',
       label: 'Information',
       route: 'Info',
+    },
+    {
+      icon: 'assignment_ind',
+      label: 'Signed in',
+      route: 'login',
     }
   ]);
 

@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { ServiceService } from '../services/service.service';
+
+import { MatTableDataSource } from '@angular/material/table';
+import { ShowArcGisComponent } from './show-arc-gis/show-arc-gis/show-arc-gis.component';
+import { MatDialog } from '@angular/material/dialog';
 // import * as L from 'leaflet';
 
 @Component({
@@ -16,8 +20,10 @@ export class ArcGisComponent {
   selectedGIS = new FormControl();
 
   Producers: any = [];
+  dataSource! :  MatTableDataSource<any>;
+  
 
-  constructor(private service: ServiceService) { } 
+  constructor(private service: ServiceService, private dialog: MatDialog) { } 
 
   onChange() {
     if(this.toggleLabel.value == 'Show filter') {
@@ -45,6 +51,7 @@ export class ArcGisComponent {
     if (str == "All"){
       this.service.getMetadata().subscribe(data=>{
         this.Producers = data;
+        this.dataSource = new MatTableDataSource(data);
       });
     }
     else{
@@ -59,4 +66,16 @@ export class ArcGisComponent {
     this.genMap("All");
   }
 
+  onDetail(producer: string, vinyard: string): void{
+    for (var p of this.Producers){
+      if (p.Producer === producer && p.Vineyard ===vinyard){
+          this.dialog.open(ShowArcGisComponent, {
+            height: '90%',
+            width: '60%',
+            data: p
+          });
+
+        }
+    }
+  }
 }

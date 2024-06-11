@@ -1,0 +1,17 @@
+<div>
+<mat-dialog-content>
+    <form class="gis-form" #form="ngForm">
+        <h1><th>{{title}}</th></h1>
+        <mat-label>Producer ID: <b>{{MetadataDetails.ID}}</b></mat-label>
+        <mat-label>Closure: <b>{{MetadataDetails.Closure}}</b></mat-label>
+        <mat-label>Cost: <b>{{MetadataDetails.Cost}}</b></mat-label>
+        <div>Producer abbreviation: <b>{{MetadataDetails.Producer_Abbrev}}</b></div>
+        <br>
+        <div><b>{{MetadataDetails.Producer}} </b>owned the <b>{{MetadataDetails.Vineyard}}</b> vinyard.
+        This wine is <b>{{MetadataDetails.Uses}}</b> quality, produced in <b>{{MetadataDetails.Vintage}}</b>, with <b>{{MetadataDetails.Harvest}}</b> harvesting and <b>{{MetadataDetails.Yield}}</b> yield. The production is quite <b>{{MetadataDetails.Production}}</b> about 
+        <b>{{MetadataDetails.Quality}}</b> quality score, by <b>{{MetadataDetails.Viticulture}}</b> viticulture.</div>
+        <br>
+        <div><th><img  [src] ="MetadataDetails.Layer_ID1" style="width: 700px;height: 500px;"></th></div>
+    </form>
+</mat-dialog-content>
+</div>

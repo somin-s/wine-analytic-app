@@ -2,7 +2,7 @@
     <mat-label [formControl] = "toggleLabel">{{toggleLabel.value}}</mat-label>
 </mat-slide-toggle>
 
-<mat-drawer-container class="example-container" [hasBackdrop]="false">
+<mat-drawer-container class="container" [hasBackdrop]="false">
     <mat-drawer #drawer mode="side" opened>
         <tr>
           <mat-form-field>
@@ -16,11 +16,14 @@
         </tr>
     </mat-drawer>
     <div class="container">
-    <mat-card class = "example-card" *ngFor ="let producer of Producers">
+    <mat-card class = "card" *ngFor ="let producer of Producers">
         <mat-card-header>
                 <div><mat-card-title><th>{{producer.Vineyard}}<th></mat-card-title></div>
         </mat-card-header>
-        <mat-card-content> {{producer.Region}} </mat-card-content>
+        <mat-card-content> {{producer.Region}},  {{producer.Producer}},
+            <button mat-button color="primary" (click) = "onDetail(producer.Producer,producer.Vineyard)">details</button>
+            <!-- <a mat-menu-item (click) = "onDetail()" color="primary">Detail</a> -->
+        </mat-card-content>
         <mat-card-content>
             <img  class="map-frame" [src] ="producer.Layer_ID1" style="width: 300px;height: 200px;"> 
         </mat-card-content>

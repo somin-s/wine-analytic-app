@@ -1,0 +1,12 @@
+.gis-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.gis-form > * {
+    width: 100%;
+}
+
+.close{
+    width: 100%;
+}
