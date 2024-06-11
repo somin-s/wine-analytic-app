@@ -1,6 +1,4 @@
 import { Component, computed, signal } from '@angular/core';
-// import { CommonModule } from '@angular/common'; //tmp
-// import { RouterOutlet } from '@angular/router'; //tmp
 
 export type MenuItem = {
   icon: string;
@@ -12,7 +10,6 @@ export type MenuItem = {
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  //imports: [CommonModule, RouterOutlet],//tmp
 
 
 })
