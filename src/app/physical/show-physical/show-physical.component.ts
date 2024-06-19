@@ -36,7 +36,6 @@ export class ShowPhysicalComponent
   }
   refreshList() {
     this.service.getPhysicalData().subscribe(data=>{
-      console.log(data);
       this.dataSource = new MatTableDataSource(data);
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;

@@ -2,19 +2,18 @@ import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Subject } from 'rxjs';
-
 import { Metadata } from '../models/metadata';
 import { MetadataGraph} from '../models/metadata';
 import { MetadataGraphColor } from '../models/metadata';
 import { Physical } from '../models/physical';
-
 import { AromaLincoln } from '../models/download';
 import { Berry_OD } from '../models/download';
 import { Color_Lincoln } from '../models/download';
 import { Comp_Kea_Berry_Vs_AWRI } from '../models/download';
 import { Oenological_analysis_PFR } from '../models/download';
-
 import { User } from '../models/user';
+import { ML } from '../models/ml';
+import { MLSlider } from '../models/ml';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -26,10 +25,23 @@ export class ServiceService {
   //readonly APIUrl = "https://pinotnz.azurewebsites.net/api/Pinot/";
 
   private APIUrl = environment.APIUrl;
+  private APIUrlFlask = environment.APIUrlFlask;
 
   constructor(private http:HttpClient) { }
 
 
+
+ //get ML model result
+  getAIModel(): Observable<ML[]> {
+    return this.http.get<ML[]>(this.APIUrlFlask+"getModel");
+  }
+  // getAIModel(){
+  //   return this.http.get(this.APIUrlFlask+"getModel");
+  // }
+  classifyAIModel(classifyParameter:MLSlider): Observable<any[]> {
+    return this.http.post<any[]>(this.APIUrlFlask+"ModelClassify", classifyParameter);
+  }
+    
   //#region for test
   getUser():  Observable<User[]> {
     const headers= new HttpHeaders().set('content-type', 'application/json')
@@ -41,10 +53,6 @@ export class ServiceService {
 
     return this.http.get<User[]>(this.APIUrl+'GetUserPWD', {headers: headers, withCredentials: true});
   }
-  // getUser(checkUser:User):  Observable<User> {
-  //  return this.http.post<User>(this.APIUrl+'GetUserPWD', checkUser);
-  // }
-  // #endregion test
 
   //#region for Metadata
   getMetadata(): Observable<Metadata[]> {

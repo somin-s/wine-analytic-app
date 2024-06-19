@@ -1,0 +1,135 @@
+<mat-slide-toggle (click)="drawer.toggle()" [formControl] = "toggle" (change)="onChange()" value="false">
+    <mat-label [formControl] = "toggleLabel">{{toggleLabel.value}}</mat-label>
+</mat-slide-toggle>
+<mat-dialog-content>
+
+<mat-drawer-container #containerML id = "containerML"  class="container" [hasBackdrop]="false">
+    <mat-drawer #drawer mode="side" opened>
+        <form #form="ngForm" (ngSubmit) = "onSubmit()">
+        
+            <mat-card class="result-card">
+                <mat-card-content>
+                    <div class="label-container">
+                        <label>Cluster number: </label>
+                    </div>
+                    <mat-slider min="1.0" max="52.0" step="1" discrete [displayWith]="formatLabel">
+                        <input id = "Cluster_number" name = "Cluster_number" matSliderThumb 
+                        value="23.0" [(ngModel)]="slider.Cluster_number">
+                    </mat-slider>
+                    <div class="label-container">
+                        <label>Cluster weight: </label>
+                    </div>
+                    <mat-slider min="35.0" max="253.0" step="1" discrete [displayWith]="formatLabel" >
+                        <input id = "Cluster_weight" name = "Cluster_weight" matSliderThumb 
+                        value="144.0" [(ngModel)]="slider.Cluster_weight">
+                    </mat-slider>
+                    <div class="label-container">
+                        <label>Shoot number more 5mm: </label>
+                    </div>
+                    <mat-slider min="4.0" max="30.0" step="1" discrete [displayWith]="formatLabel">
+                        <input id = "Shoot_number_more_5mm" name = "Shoot_number_more_5mm" matSliderThumb 
+                        value="12.0" [(ngModel)]="slider.Shoot_number_more_5mm">
+                    </mat-slider>
+                    <div class="label-container">
+                        <label>Leaf area per metre: </label>
+                    </div>
+                    <mat-slider min="2800.0" max="32000.0" step="1" discrete [displayWith]="formatLabel">
+                        <input id = "Leaf_Area_per_m" name = "Leaf_Area_per_m" matSliderThumb 
+                        value="12000.0" [(ngModel)]="slider.Leaf_Area_per_m">
+                    </mat-slider>
+                    <div class="label-container">
+                        <label>Berry weight: </label>
+                    </div>
+                    <mat-slider min="1.0" max="2.0" step="0.001" discrete [displayWith]="formatLabel">
+                        <input id = "Berry_weight" name = "Berry_weight" matSliderThumb 
+                        value="1.78" [(ngModel)]="slider.Berry_weight">
+                    </mat-slider>
+                </mat-card-content>
+            </mat-card>
+
+
+        <mat-nav-list>
+
+            <mat-list-item>
+                
+            </mat-list-item>
+            <mat-list-item>
+                
+            </mat-list-item>
+            <mat-list-item>
+                
+            </mat-list-item>
+            <mat-list-item>
+                
+            </mat-list-item>
+            <mat-list-item>
+                
+            </mat-list-item>
+        </mat-nav-list>
+        <section>
+            <div class="center">
+              <button color="primary" mat-raised-button>Classify!</button>
+            </div>
+        </section>
+        </form>
+    </mat-drawer>
+    <div class="container">
+        <tr>
+        <td>
+        <highcharts-chart
+                [Highcharts] = "chart1" 
+                [options]="chartOption1"
+                style="width: 100%; height: 400px; display: block;">       
+        </highcharts-chart>
+
+        </td>
+        <td>
+        <highcharts-chart
+                [Highcharts] = "chart2" 
+                [options]="chartOption2"
+                style="width: 100%; height: 400px; display: block;">       
+        </highcharts-chart>
+        </td>
+        </tr>
+        <tr>
+        <td>
+        <highcharts-chart
+                [Highcharts] = "chart3" 
+                [options]="chartOption3"
+                style="width: 100%; height: 400px; display: block;">       
+        </highcharts-chart>
+        </td>
+        <td>
+        <highcharts-chart
+                [Highcharts] = "chart4" 
+                [options]="chartOption4"
+                style="width: 100%; height: 400px; display: block;">       
+        </highcharts-chart>
+        </td>
+        </tr>
+        <!-- <td>
+        <mat-table matSort [dataSource] = "dataSource">
+            <mat-header-row *matHeaderRowDef="displayedColumns">
+                <mat-header-cell *matHeaderCellDef>data1</mat-header-cell>
+                <mat-header-cell *matHeaderCellDef>data2</mat-header-cell>
+                <mat-header-cell *matHeaderCellDef>data3</mat-header-cell>
+                <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+            </mat-header-row>
+            <ng-container matColumnDef="data1">
+                <mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="data1">data1</mat-header-cell>
+                <mat-cell *matCellDef="let element">{{element.data1}}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="data2">
+                <mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="data2">data2</mat-header-cell>
+                <mat-cell *matCellDef="let element">{{element.data2}}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="data3">
+                <mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="data3">data3</mat-header-cell>
+                <mat-cell *matCellDef="let element">{{element.data3}}</mat-cell>
+            </ng-container>
+        </mat-table>
+        <mat-paginator [pageSizeOptions] = "[10,25,100]" aria-label="select page of users"></mat-paginator>
+        </td> -->
+        
+    </div>
+</mat-drawer-container>

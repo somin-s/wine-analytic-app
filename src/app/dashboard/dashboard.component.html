@@ -2,7 +2,7 @@
     <mat-label [formControl] = "toggleLabel">{{toggleLabel.value}}</mat-label>
 </mat-slide-toggle>
   
-  <mat-drawer-container #containerChart id = "containerChart" class="example-container" [hasBackdrop]="false">
+  <mat-drawer-container #containerChart id = "containerChart" class="container" [hasBackdrop]="false">
     <mat-drawer #drawer mode="side" opened>
       <tr>
         <mat-form-field>
@@ -36,7 +36,6 @@
             </mat-select>
         </mat-form-field>
       </tr>
-  
     </mat-drawer>
       <tr>
       <td>

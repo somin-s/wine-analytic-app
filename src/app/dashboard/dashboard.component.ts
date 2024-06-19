@@ -26,7 +26,7 @@ export class DashboardComponent {
    producers:any=[];
 
    toggle = new FormControl('toggle');
-   toggleLabel = new FormControl('Show analytic tools');
+   toggleLabel = new FormControl('Show parameters');
 
    selectedQ = new FormControl('');
    selectedC = new FormControl('');
@@ -41,11 +41,11 @@ export class DashboardComponent {
    constructor(private service: ServiceService) {   }
 
    onChange() {
-      if(this.toggleLabel.value == 'Show analytic tools') {
-         this.toggleLabel.setValue('Hide analytic tools');
+      if(this.toggleLabel.value == 'Show parameters') {
+         this.toggleLabel.setValue('Hide parameters');
       }
       else{
-         this.toggleLabel.setValue('Show analytic tools');
+         this.toggleLabel.setValue('Show parameters');
       }
    }
 
@@ -59,7 +59,7 @@ export class DashboardComponent {
                data: [item.Quality/item.DIV]
             }));
             this.QualityChart(qData,"Qualities based on "+PD);
-            })
+         })
       }
       else
       {

@@ -25,6 +25,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatTabsModule } from '@angular/material/tabs';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatSliderModule} from '@angular/material/slider';
 
 import { MetadataComponent } from './metadata/metadata.component';
 import { HighchartsChartModule } from 'highcharts-angular';
@@ -44,6 +46,7 @@ import { DownloadComponent } from './download/download.component';
 import { LoginComponent } from './login/login.component';
 import { InfoComponent } from './info/info/info.component';
 import { ShowArcGisComponent } from './arc-gis/show-arc-gis/show-arc-gis/show-arc-gis.component';
+import { MlComponent } from './ml/ml.component';
 
 
 @NgModule({
@@ -64,6 +67,7 @@ import { ShowArcGisComponent } from './arc-gis/show-arc-gis/show-arc-gis/show-ar
     ArcGisComponent,
     InfoComponent,
     ShowArcGisComponent,
+    MlComponent,
   ],
   imports: [
     BrowserModule,
@@ -88,11 +92,13 @@ import { ShowArcGisComponent } from './arc-gis/show-arc-gis/show-arc-gis/show-ar
     MatIconModule,
     MatListModule,
     MatMenuModule,
+    MatTooltipModule,
      
     MatSlideToggleModule,
     MatFormFieldModule,
     MatSelectModule,
     MatTabsModule,
+    MatSliderModule,
 
     
   ],

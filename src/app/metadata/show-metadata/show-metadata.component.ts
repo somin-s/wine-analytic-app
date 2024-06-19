@@ -69,7 +69,6 @@ export class ShowMetadataComponent {
       width: '60%',
       data: meta
     });
-
    }
 
   onDelete(id: string){

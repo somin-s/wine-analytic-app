@@ -24,7 +24,7 @@
           routerLinkActive = "selected-menu-item"
           #rla="routerLinkActive" 
           [activated]="rla.isActive">
-        <mat-icon matListItemIcon>{{item.icon}}</mat-icon>
+        <mat-icon matListItemIcon matTooltip={{item.label}}>{{item.icon}}</mat-icon>
         <span matListItemTitle *ngIf="!collapsed()">{{item.label}}</span>
       </a>
     </mat-nav-list>
