@@ -2303,7 +2303,7 @@ class EditMetadataComponent {
     selectors: [["app-edit-metadata"]],
     decls: 81,
     vars: 19,
-    consts: [["mat-dialog-title", ""], ["autocomplete", "off", 1, "example-form", 3, "ngSubmit"], ["form", "ngForm"], ["matInput", "", "required", "", "minlength", "2", "type", "text", "id", "Producer_Abbrev", "name", "Producer_Abbrev", 3, "ngModel", "ngModelChange"], ["matInput", "", "required", "", "minlength", "2", "type", "text", "id", "Producer", "name", "Producer", 3, "ngModel", "ngModelChange"], ["matInput", "", "required", "", "minlength", "2", "type", "text", "id", "Vineyard", "name", "Vineyard", 3, "ngModel", "ngModelChange"], ["matNativeControl", "", "id", "Vintage", "name", "Vintage", 3, "ngModel", "ngModelChange"], [3, "value", 4, "ngFor", "ngForOf"], ["matInput", "", "required", "", "minlength", "2", "type", "text", "id", "Region", "name", "Region", 3, "ngModel", "ngModelChange"], ["matInput", "", "minlength", "2", "type", "text", "id", "Cost", "name", "Cost", 3, "ngModel", "ngModelChange"], ["matInput", "", "minlength", "2", "type", "text", "id", "Uses", "name", "Uses", 3, "ngModel", "ngModelChange"], ["matInput", "", "minlength", "2", "type", "text", "id", "Closure", "name", "Closure", 3, "ngModel", "ngModelChange"], ["matInput", "", "minlength", "2", "type", "text", "id", "Harvest", "name", "Harvest", 3, "ngModel", "ngModelChange"], ["matInput", "", "required", "", "minlength", "2", "type", "text", "id", "Yield", "name", "Yield", 3, "ngModel", "ngModelChange"], ["aria-label", "Select an option", "id", "Production", "name", "Production", 3, "ngModel", "ngModelChange"], ["matInput", "", "required", "", "minlength", "2", "type", "text", "id", "Viticulture", "name", "Viticulture", 3, "ngModel", "ngModelChange"], ["matInput", "", "required", "", "minlength", "2", "type", "text", "id", "Quality", "name", "Quality", 3, "ngModel", "ngModelChange"], ["matInput", "", "minlength", "2", "type", "text", "id", "Layer_ID", "name", "Layer_ID", 3, "ngModel", "ngModelChange"], ["matInput", "", "minlength", "2", "type", "text", "id", "Layer_ID1", "name", "Layer_ID1", 3, "ngModel", "ngModelChange"], ["mat-raised-button", "", "type", "submit", "color", "primary"], ["mat-raised-button", "", "color", "warn", 1, "close", 3, "click"], [3, "value"]],
+    consts: [["mat-dialog-title", ""], ["autocomplete", "off", 1, "form1", 3, "ngSubmit"], ["form", "ngForm"], ["matInput", "", "required", "", "minlength", "2", "type", "text", "id", "Producer_Abbrev", "name", "Producer_Abbrev", 3, "ngModel", "ngModelChange"], ["matInput", "", "required", "", "minlength", "2", "type", "text", "id", "Producer", "name", "Producer", 3, "ngModel", "ngModelChange"], ["matInput", "", "required", "", "minlength", "2", "type", "text", "id", "Vineyard", "name", "Vineyard", 3, "ngModel", "ngModelChange"], ["matNativeControl", "", "id", "Vintage", "name", "Vintage", 3, "ngModel", "ngModelChange"], [3, "value", 4, "ngFor", "ngForOf"], ["matInput", "", "required", "", "minlength", "2", "type", "text", "id", "Region", "name", "Region", 3, "ngModel", "ngModelChange"], ["matInput", "", "minlength", "2", "type", "text", "id", "Cost", "name", "Cost", 3, "ngModel", "ngModelChange"], ["matInput", "", "minlength", "2", "type", "text", "id", "Uses", "name", "Uses", 3, "ngModel", "ngModelChange"], ["matInput", "", "minlength", "2", "type", "text", "id", "Closure", "name", "Closure", 3, "ngModel", "ngModelChange"], ["matInput", "", "minlength", "2", "type", "text", "id", "Harvest", "name", "Harvest", 3, "ngModel", "ngModelChange"], ["matInput", "", "required", "", "minlength", "2", "type", "text", "id", "Yield", "name", "Yield", 3, "ngModel", "ngModelChange"], ["aria-label", "Select an option", "id", "Production", "name", "Production", 3, "ngModel", "ngModelChange"], ["matInput", "", "required", "", "minlength", "2", "type", "text", "id", "Viticulture", "name", "Viticulture", 3, "ngModel", "ngModelChange"], ["matInput", "", "required", "", "minlength", "2", "type", "text", "id", "Quality", "name", "Quality", 3, "ngModel", "ngModelChange"], ["matInput", "", "minlength", "2", "type", "text", "id", "Layer_ID", "name", "Layer_ID", 3, "ngModel", "ngModelChange"], ["matInput", "", "minlength", "2", "type", "text", "id", "Layer_ID1", "name", "Layer_ID1", 3, "ngModel", "ngModelChange"], ["mat-raised-button", "", "type", "submit", "color", "primary"], ["mat-raised-button", "", "color", "warn", 1, "close", 3, "click"], [3, "value"]],
     template: function EditMetadataComponent_Template(rf, ctx) {
       if (rf & 1) {
         const _r5 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
@@ -2950,10 +2950,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material_button__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/material/button */ 895);
 /* harmony import */ var _angular_material_form_field__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/material/form-field */ 1333);
 /* harmony import */ var _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/material/sidenav */ 1465);
-/* harmony import */ var _angular_material_list__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/material/list */ 3228);
-/* harmony import */ var _angular_material_slide_toggle__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/material/slide-toggle */ 9293);
-/* harmony import */ var _angular_material_slider__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/material/slider */ 549);
-
+/* harmony import */ var _angular_material_slide_toggle__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/material/slide-toggle */ 9293);
+/* harmony import */ var _angular_material_slider__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/material/slider */ 549);
 
 
 
@@ -3171,7 +3169,7 @@ class MlComponent {
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵloadQuery"]()) && (ctx.sort = _t.first);
       }
     },
-    decls: 58,
+    decls: 52,
     vars: 22,
     consts: [["value", "false", 3, "formControl", "click", "change"], [3, "formControl"], ["id", "containerML", 1, "container", 3, "hasBackdrop"], ["containerML", ""], ["mode", "side", "opened", ""], ["drawer", ""], [3, "ngSubmit"], ["form", "ngForm"], [1, "result-card"], [1, "label-container"], ["min", "1.0", "max", "52.0", "step", "1", "discrete", "", 3, "displayWith"], ["id", "Cluster_number", "name", "Cluster_number", "matSliderThumb", "", "value", "23.0", 3, "ngModel", "ngModelChange"], ["min", "35.0", "max", "253.0", "step", "1", "discrete", "", 3, "displayWith"], ["id", "Cluster_weight", "name", "Cluster_weight", "matSliderThumb", "", "value", "144.0", 3, "ngModel", "ngModelChange"], ["min", "4.0", "max", "30.0", "step", "1", "discrete", "", 3, "displayWith"], ["id", "Shoot_number_more_5mm", "name", "Shoot_number_more_5mm", "matSliderThumb", "", "value", "12.0", 3, "ngModel", "ngModelChange"], ["min", "2800.0", "max", "32000.0", "step", "1", "discrete", "", 3, "displayWith"], ["id", "Leaf_Area_per_m", "name", "Leaf_Area_per_m", "matSliderThumb", "", "value", "12000.0", 3, "ngModel", "ngModelChange"], ["min", "1.0", "max", "2.0", "step", "0.001", "discrete", "", 3, "displayWith"], ["id", "Berry_weight", "name", "Berry_weight", "matSliderThumb", "", "value", "1.78", 3, "ngModel", "ngModelChange"], [1, "center"], ["color", "primary", "mat-raised-button", ""], [1, "container"], [2, "width", "100%", "height", "400px", "display", "block", 3, "Highcharts", "options"]],
     template: function MlComponent_Template(rf, ctx) {
@@ -3232,23 +3230,20 @@ class MlComponent {
           return ctx.slider.Berry_weight = $event;
         });
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()()()();
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](37, "mat-nav-list");
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](38, "mat-list-item")(39, "mat-list-item")(40, "mat-list-item")(41, "mat-list-item")(42, "mat-list-item");
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](43, "section")(44, "div", 20)(45, "button", 21);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](46, "Classify!");
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](37, "section")(38, "div", 20)(39, "button", 21);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](40, "Classify!");
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()()()()();
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](47, "div", 22)(48, "tr")(49, "td");
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](50, "highcharts-chart", 23);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](41, "div", 22)(42, "tr")(43, "td");
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](44, "highcharts-chart", 23);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](51, "td");
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](52, "highcharts-chart", 23);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](45, "td");
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](46, "highcharts-chart", 23);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()();
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](53, "tr")(54, "td");
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](55, "highcharts-chart", 23);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](47, "tr")(48, "td");
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](49, "highcharts-chart", 23);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](56, "td");
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](57, "highcharts-chart", 23);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](50, "td");
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](51, "highcharts-chart", 23);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()()()()();
       }
       if (rf & 2) {
@@ -3279,7 +3274,7 @@ class MlComponent {
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("displayWith", ctx.formatLabel);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngModel", ctx.slider.Berry_weight);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](14);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](8);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("Highcharts", ctx.chart1)("options", ctx.chartOption1);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("Highcharts", ctx.chart2)("options", ctx.chartOption2);
@@ -3289,7 +3284,7 @@ class MlComponent {
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("Highcharts", ctx.chart4)("options", ctx.chartOption4);
       }
     },
-    dependencies: [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__.DefaultValueAccessor, _angular_forms__WEBPACK_IMPORTED_MODULE_2__.NgControlStatus, _angular_forms__WEBPACK_IMPORTED_MODULE_2__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_2__.FormControlDirective, _angular_forms__WEBPACK_IMPORTED_MODULE_2__.NgModel, _angular_forms__WEBPACK_IMPORTED_MODULE_2__.NgForm, highcharts_angular__WEBPACK_IMPORTED_MODULE_6__.HighchartsChartComponent, _angular_material_card__WEBPACK_IMPORTED_MODULE_7__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_7__.MatCardContent, _angular_material_dialog__WEBPACK_IMPORTED_MODULE_8__.MatDialogContent, _angular_material_button__WEBPACK_IMPORTED_MODULE_9__.MatButton, _angular_material_form_field__WEBPACK_IMPORTED_MODULE_10__.MatLabel, _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_11__.MatDrawer, _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_11__.MatDrawerContainer, _angular_material_list__WEBPACK_IMPORTED_MODULE_12__.MatNavList, _angular_material_list__WEBPACK_IMPORTED_MODULE_12__.MatListItem, _angular_material_slide_toggle__WEBPACK_IMPORTED_MODULE_13__.MatSlideToggle, _angular_material_slider__WEBPACK_IMPORTED_MODULE_14__.MatSlider, _angular_material_slider__WEBPACK_IMPORTED_MODULE_14__.MatSliderThumb],
+    dependencies: [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__.DefaultValueAccessor, _angular_forms__WEBPACK_IMPORTED_MODULE_2__.NgControlStatus, _angular_forms__WEBPACK_IMPORTED_MODULE_2__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_2__.FormControlDirective, _angular_forms__WEBPACK_IMPORTED_MODULE_2__.NgModel, _angular_forms__WEBPACK_IMPORTED_MODULE_2__.NgForm, highcharts_angular__WEBPACK_IMPORTED_MODULE_6__.HighchartsChartComponent, _angular_material_card__WEBPACK_IMPORTED_MODULE_7__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_7__.MatCardContent, _angular_material_dialog__WEBPACK_IMPORTED_MODULE_8__.MatDialogContent, _angular_material_button__WEBPACK_IMPORTED_MODULE_9__.MatButton, _angular_material_form_field__WEBPACK_IMPORTED_MODULE_10__.MatLabel, _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_11__.MatDrawer, _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_11__.MatDrawerContainer, _angular_material_slide_toggle__WEBPACK_IMPORTED_MODULE_12__.MatSlideToggle, _angular_material_slider__WEBPACK_IMPORTED_MODULE_13__.MatSlider, _angular_material_slider__WEBPACK_IMPORTED_MODULE_13__.MatSliderThumb],
     styles: [".container[_ngcontent-%COMP%] {\n    width: auto;\n    height: auto;\n    margin: 12px;\n    border: 1px solid #FFF;\n    align-items: center;\n    justify-content: center;\n  }\n  \n  mat-drawer-content[_ngcontent-%COMP%] {\n    padding: 12px;\n    display: flex;\n    flex-direction: column;\n    align-items: flex-start;\n  }\n\n  mat-slider[_ngcontent-%COMP%] {\n    padding: auto;\n    width: 270px;\n    margin: 5px;\n\n  }\n\n  .center[_ngcontent-%COMP%] {\n    text-align: center;\n    margin: auto;\n    width: 60%;\n    padding: 10px;\n  }\n\n  .label-container[_ngcontent-%COMP%] {\n    display: flex;\n    justify-content: space-between;\n    margin: 20px 10px 0;\n    max-width: 284px;\n  }\n  .result-card[_ngcontent-%COMP%]   .value-label[_ngcontent-%COMP%] {\n    font-weight: 600;\n  }\n\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9hcHAvbWwvbWwuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLFdBQVc7SUFDWCxZQUFZO0lBQ1osWUFBWTtJQUNaLHNCQUFzQjtJQUN0QixtQkFBbUI7SUFDbkIsdUJBQXVCO0VBQ3pCOztFQUVBO0lBQ0UsYUFBYTtJQUNiLGFBQWE7SUFDYixzQkFBc0I7SUFDdEIsdUJBQXVCO0VBQ3pCOztFQUVBO0lBQ0UsYUFBYTtJQUNiLFlBQVk7SUFDWixXQUFXOztFQUViOztFQUVBO0lBQ0Usa0JBQWtCO0lBQ2xCLFlBQVk7SUFDWixVQUFVO0lBQ1YsYUFBYTtFQUNmOztFQUVBO0lBQ0UsYUFBYTtJQUNiLDhCQUE4QjtJQUM5QixtQkFBbUI7SUFDbkIsZ0JBQWdCO0VBQ2xCO0VBQ0E7SUFDRSxnQkFBZ0I7RUFDbEIiLCJzb3VyY2VzQ29udGVudCI6WyIuY29udGFpbmVyIHtcclxuICAgIHdpZHRoOiBhdXRvO1xyXG4gICAgaGVpZ2h0OiBhdXRvO1xyXG4gICAgbWFyZ2luOiAxMnB4O1xyXG4gICAgYm9yZGVyOiAxcHggc29saWQgI0ZGRjtcclxuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxuICB9XHJcbiAgXHJcbiAgbWF0LWRyYXdlci1jb250ZW50IHtcclxuICAgIHBhZGRpbmc6IDEycHg7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcclxuICAgIGFsaWduLWl0ZW1zOiBmbGV4LXN0YXJ0O1xyXG4gIH1cclxuXHJcbiAgbWF0LXNsaWRlciB7XHJcbiAgICBwYWRkaW5nOiBhdXRvO1xyXG4gICAgd2lkdGg6IDI3MHB4O1xyXG4gICAgbWFyZ2luOiA1cHg7XHJcblxyXG4gIH1cclxuXHJcbiAgLmNlbnRlciB7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICBtYXJnaW46IGF1dG87XHJcbiAgICB3aWR0aDogNjAlO1xyXG4gICAgcGFkZGluZzogMTBweDtcclxuICB9XHJcblxyXG4gIC5sYWJlbC1jb250YWluZXIge1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcclxuICAgIG1hcmdpbjogMjBweCAxMHB4IDA7XHJcbiAgICBtYXgtd2lkdGg6IDI4NHB4O1xyXG4gIH1cclxuICAucmVzdWx0LWNhcmQgLnZhbHVlLWxhYmVsIHtcclxuICAgIGZvbnQtd2VpZ2h0OiA2MDA7XHJcbiAgfVxyXG4iXSwic291cmNlUm9vdCI6IiJ9 */"]
   });
 }
