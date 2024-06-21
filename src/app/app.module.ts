@@ -27,6 +27,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatSliderModule} from '@angular/material/slider';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 import { MetadataComponent } from './metadata/metadata.component';
 import { HighchartsChartModule } from 'highcharts-angular';
@@ -99,6 +100,7 @@ import { MlComponent } from './ml/ml.component';
     MatSelectModule,
     MatTabsModule,
     MatSliderModule,
+    MatProgressSpinnerModule,
 
     
   ],

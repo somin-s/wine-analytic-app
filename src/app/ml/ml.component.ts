@@ -31,11 +31,7 @@ export class MlComponent {
 
   toggle = new FormControl('toggle');
   toggleLabel = new FormControl('Show parameters');
-
   formatLabel(value: number): string {
-    // if (value >= 1000) {
-    //   return Math.round(value / 1000) + 'k';
-    // }
     return `${value}`;
   }
 
@@ -45,6 +41,8 @@ export class MlComponent {
       })
     }
   
+  loading = true;
+
   slider: MLSlider = {
     Cluster_number: 23.0,
     Cluster_weight: 144.0,
@@ -81,16 +79,39 @@ export class MlComponent {
     // })
   }
 
+  // hideloader() { 
+  //   this.loading= false; 
+  // } 
+
+  // load() {
+  //   setTimeout( () => this.loading = true, 20000 );
+  //   if (this.loading == true)
+  //     {
+  //       alert('Reload');
+  //       this.onSubmit();
+  //     }
+
+  // }
+
   onSubmit() {
     //console.log(this.slider);
     // this.service.getAIModel().subscribe(data=> {
     //   console.log(data);
     // })
+    //this.load()
+
     this.service.classifyAIModel(this.slider).subscribe(dt=>{
-       const data1 = dt.filter(x=> x.Yield === "Yield per wine")
-       const data2 = dt.filter(x=> x.Yield === "Yield per metre")
-       const data3 = dt.filter(x=> x.Yield === "Yield per square metre")
-       const data4 = dt.filter(x=> x.Yield === "Yield per square metre")
+      if (dt) {
+        this.loading = false;
+      }
+      else{
+        alert('Reload');
+      }
+      this.loading = false;
+      const data1 = dt.filter(x=> x.Yield === "Yield per wine");
+      const data2 = dt.filter(x=> x.Yield === "Yield per metre");
+      const data3 = dt.filter(x=> x.Yield === "Yield per square metre");
+      const data4 = dt.filter(x=> x.Yield === "Yield per square metre");
 
       console.log(data1);
       const qData1 = data1.map((item, index) => ( {
