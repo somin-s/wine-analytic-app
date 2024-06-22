@@ -85,7 +85,7 @@ export class MlComponent {
 
   loading() {
     //setTimeout( () => this.loading = true, 5000 );
-    setTimeout( () => this.onSubmit(), 5000 );
+    setTimeout( () => this.onSubmit(), 60000 );
     // if (this.loading == true)
     //   {
     //     alert('Reload');
