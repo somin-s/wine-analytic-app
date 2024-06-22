@@ -2,6 +2,7 @@ import { Component} from '@angular/core';
 import * as Highcharts from 'highcharts';
 import {ServiceService} from 'src/app/services/service.service';
 import { FormControl } from '@angular/forms';
+import { MlComponent } from '../ml/ml.component';
 
 
 @Component({
@@ -38,8 +39,8 @@ export class DashboardComponent {
    //selectedViticulture = new FormControl('');
 
 
-   constructor(private service: ServiceService) {   }
-
+   constructor(private service: ServiceService) {   
+   }
    onChange() {
       if(this.toggleLabel.value == 'Show parameters') {
          this.toggleLabel.setValue('Hide parameters');

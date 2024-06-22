@@ -41,7 +41,7 @@ export class MlComponent {
       })
     }
   
-  loading = true;
+  loaded = false;
 
   slider: MLSlider = {
     Cluster_number: 23.0,
@@ -83,31 +83,25 @@ export class MlComponent {
   //   this.loading= false; 
   // } 
 
-  // load() {
-  //   setTimeout( () => this.loading = true, 20000 );
-  //   if (this.loading == true)
-  //     {
-  //       alert('Reload');
-  //       this.onSubmit();
-  //     }
+  loading() {
+    //setTimeout( () => this.loading = true, 5000 );
+    setTimeout( () => this.onSubmit(), 5000 );
+    // if (this.loading == true)
+    //   {
+    //     alert('Reload');
+    //     this.onSubmit();
+    //   }
 
-  // }
+  }
 
   onSubmit() {
     //console.log(this.slider);
     // this.service.getAIModel().subscribe(data=> {
     //   console.log(data);
     // })
-    //this.load()
-
+    if (!this.loaded) this.loading();
     this.service.classifyAIModel(this.slider).subscribe(dt=>{
-      if (dt) {
-        this.loading = false;
-      }
-      else{
-        alert('Reload');
-      }
-      this.loading = false;
+      this.loaded = true;
       const data1 = dt.filter(x=> x.Yield === "Yield per wine");
       const data2 = dt.filter(x=> x.Yield === "Yield per metre");
       const data3 = dt.filter(x=> x.Yield === "Yield per square metre");

@@ -142,7 +142,6 @@ class AppComponent {
     this.grape = "assets/img/grape.png";
     this.signedIn = true;
     this.User = "";
-    this.loading = true;
     this.menuItems = (0,_angular_core__WEBPACK_IMPORTED_MODULE_0__.signal)([{
       icon: 'hub',
       label: 'Predicting model',
@@ -3124,7 +3123,7 @@ class MlComponent {
     this.chart4 = highcharts__WEBPACK_IMPORTED_MODULE_0__;
     this.toggle = new _angular_forms__WEBPACK_IMPORTED_MODULE_3__.FormControl('toggle');
     this.toggleLabel = new _angular_forms__WEBPACK_IMPORTED_MODULE_3__.FormControl('Show parameters');
-    this.loading = true;
+    this.loaded = false;
     this.slider = {
       Cluster_number: 23.0,
       Cluster_weight: 144.0,
@@ -3160,27 +3159,24 @@ class MlComponent {
   // hideloader() { 
   //   this.loading= false; 
   // } 
-  // load() {
-  //   setTimeout( () => this.loading = true, 20000 );
-  //   if (this.loading == true)
-  //     {
-  //       alert('Reload');
-  //       this.onSubmit();
-  //     }
-  // }
+  loading() {
+    //setTimeout( () => this.loading = true, 5000 );
+    setTimeout(() => this.onSubmit(), 5000);
+    // if (this.loading == true)
+    //   {
+    //     alert('Reload');
+    //     this.onSubmit();
+    //   }
+  }
+
   onSubmit() {
     //console.log(this.slider);
     // this.service.getAIModel().subscribe(data=> {
     //   console.log(data);
     // })
-    //this.load()
+    if (!this.loaded) this.loading();
     this.service.classifyAIModel(this.slider).subscribe(dt => {
-      if (dt) {
-        this.loading = false;
-      } else {
-        alert('Reload');
-      }
-      this.loading = false;
+      this.loaded = true;
       const data1 = dt.filter(x => x.Yield === "Yield per wine");
       const data2 = dt.filter(x => x.Yield === "Yield per metre");
       const data3 = dt.filter(x => x.Yield === "Yield per square metre");
@@ -3337,9 +3333,9 @@ class MlComponent {
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](1, MlComponent_mat_dialog_content_1_Template, 52, 22, "mat-dialog-content", 0);
       }
       if (rf & 2) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx.loading);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", !ctx.loaded);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", !ctx.loading);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx.loaded);
       }
     },
     dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_6__.NgIf, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__.DefaultValueAccessor, _angular_forms__WEBPACK_IMPORTED_MODULE_3__.NgControlStatus, _angular_forms__WEBPACK_IMPORTED_MODULE_3__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_3__.FormControlDirective, _angular_forms__WEBPACK_IMPORTED_MODULE_3__.NgModel, _angular_forms__WEBPACK_IMPORTED_MODULE_3__.NgForm, highcharts_angular__WEBPACK_IMPORTED_MODULE_7__.HighchartsChartComponent, _angular_material_card__WEBPACK_IMPORTED_MODULE_8__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_8__.MatCardContent, _angular_material_dialog__WEBPACK_IMPORTED_MODULE_9__.MatDialogContent, _angular_material_button__WEBPACK_IMPORTED_MODULE_10__.MatButton, _angular_material_form_field__WEBPACK_IMPORTED_MODULE_11__.MatLabel, _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_12__.MatDrawer, _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_12__.MatDrawerContainer, _angular_material_slide_toggle__WEBPACK_IMPORTED_MODULE_13__.MatSlideToggle, _angular_material_slider__WEBPACK_IMPORTED_MODULE_14__.MatSlider, _angular_material_slider__WEBPACK_IMPORTED_MODULE_14__.MatSliderThumb],

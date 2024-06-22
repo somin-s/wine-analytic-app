@@ -1,4 +1,4 @@
-<div *ngIf="loading">
+<div *ngIf="!loaded">
     <h1>Loading may take less than 2 minutes...</h1>
     <div class="d-flex justify-content-center"> 
       <div class="spinner-border" role="status"> 
@@ -6,8 +6,7 @@
       </div> 
     </div> 
 </div>
-
-<mat-dialog-content *ngIf="!loading">
+<mat-dialog-content *ngIf="loaded">
 <mat-slide-toggle (click)="drawer.toggle()" [formControl] = "toggle" (change)="onChange()" value="false">
     <mat-label [formControl] = "toggleLabel">{{toggleLabel.value}}</mat-label>
 </mat-slide-toggle>
