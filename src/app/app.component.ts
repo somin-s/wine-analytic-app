@@ -56,7 +56,7 @@ export class AppComponent {
 
   loaded = false;
   loading() {
-    setTimeout( () => this.loaded = true, 7000 );
+    setTimeout( () => this.loaded = true, 15000 );
     //setTimeout( () => this.onSubmit(), 60000 );
 
   }

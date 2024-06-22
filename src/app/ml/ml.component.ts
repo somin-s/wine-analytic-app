@@ -67,12 +67,12 @@ export class MlComponent {
   //   setTimeout( () => this.onSubmit(), 10000 );
 
   // }
-  // loaded = false;
+  loaded = false;
 
   onSubmit() {
     //if (!this.loaded) this.loading();
     this.service.classifyAIModel(this.slider).subscribe(dt=>{
-      //this.loaded = true;
+      this.loaded = true;
       const data1 = dt.filter(x=> x.Yield === "Yield per wine");
       const data2 = dt.filter(x=> x.Yield === "Yield per metre");
       const data3 = dt.filter(x=> x.Yield === "Yield per square metre");
