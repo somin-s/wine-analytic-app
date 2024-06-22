@@ -35,13 +35,7 @@ export class MlComponent {
     return `${value}`;
   }
 
-  constructor(private service: ServiceService) {
-      this.service.listen().subscribe(data=>{
-        this.refreshList();
-      })
-    }
-  
-  loaded = false;
+  constructor(private service: ServiceService) {}
 
   slider: MLSlider = {
     Cluster_number: 23.0,
@@ -66,42 +60,19 @@ export class MlComponent {
 
   ngOnInit(){
     this.onSubmit();
-    //this.refreshList();
   }
 
-  refreshList() {
+  // loading() {
+  //   //setTimeout( () => this.loading = true, 5000 );
+  //   setTimeout( () => this.onSubmit(), 10000 );
 
-    // this.service.getAIModel().subscribe(data=> {
-    //   this.dataSource = new MatTableDataSource(data);
-    //   console.log(this.dataSource);
-    //   this.dataSource.paginator = this.paginator;
-    //   this.dataSource.sort = this.sort;
-    // })
-  }
-
-  // hideloader() { 
-  //   this.loading= false; 
-  // } 
-
-  loading() {
-    //setTimeout( () => this.loading = true, 5000 );
-    setTimeout( () => this.onSubmit(), 60000 );
-    // if (this.loading == true)
-    //   {
-    //     alert('Reload');
-    //     this.onSubmit();
-    //   }
-
-  }
+  // }
+  // loaded = false;
 
   onSubmit() {
-    //console.log(this.slider);
-    // this.service.getAIModel().subscribe(data=> {
-    //   console.log(data);
-    // })
-    if (!this.loaded) this.loading();
+    //if (!this.loaded) this.loading();
     this.service.classifyAIModel(this.slider).subscribe(dt=>{
-      this.loaded = true;
+      //this.loaded = true;
       const data1 = dt.filter(x=> x.Yield === "Yield per wine");
       const data2 = dt.filter(x=> x.Yield === "Yield per metre");
       const data3 = dt.filter(x=> x.Yield === "Yield per square metre");

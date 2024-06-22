@@ -3,9 +3,15 @@
     <mat-icon>menu</mat-icon>
   </button>
   <div class="header-text" [class.hide-header-text]="!collapsed()">
-    <h1>Wine quality prediction</h1>
+    <h1 class = "header-text">Wine quality prediction</h1>
   </div>
 </mat-toolbar>
+
+<div class="slide-load" *ngIf="!loaded">
+  <!-- <mat-sidenav opened mode="side"> -->
+    <h2>Loading may take less than 2 minutes...</h2>
+  <!-- </mat-sidenav> -->
+</div>
 
 <mat-sidenav-container>
   <mat-sidenav opened mode="side" [style.width]="sidenavWidth()">

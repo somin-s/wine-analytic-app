@@ -54,7 +54,15 @@ export class AppComponent {
   sidenavWidth = computed(() => this.collapsed() ? '65px': '250px')
   profilePicSize = computed(()=> this.collapsed()? '30': '100')
 
+  loaded = false;
+  loading() {
+    setTimeout( () => this.loaded = true, 7000 );
+    //setTimeout( () => this.onSubmit(), 60000 );
+
+  }
+
   ngOnInit () {
+    this.loading();
     if (localStorage.getItem('session') == null || localStorage.getItem('session') == "nonMember"){
       this.signedIn = false;
     }
