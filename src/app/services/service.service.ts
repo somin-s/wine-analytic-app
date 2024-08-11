@@ -56,7 +56,7 @@ export class ServiceService {
 
   //#region for Metadata
   getMetadata(): Observable<Metadata[]> {
-    return this.http.get<Metadata[]>(this.APIUrl+'GetMetadata');
+    return this.http.get<Metadata[]>(this.APIUrl+'GetMetadata'); //can use flask
   }
 
   addMetadata(addMetadataRequest:Metadata): Observable<Metadata> {
@@ -74,11 +74,11 @@ export class ServiceService {
 
 
   getForGraph(cd: string) {
-    return this.http.get<MetadataGraph[]>(this.APIUrl+'GetMetadata_graph?condition='+cd);
+    return this.http.get<MetadataGraph[]>(this.APIUrl+'GetMetadata_graph?condition='+cd); //can use flask
   }
 
   getColorList(cd: string) {
-    return this.http.get<MetadataGraphColor[]>(this.APIUrl+'GetMetadata_graphColor?condition='+cd);
+    return this.http.get<MetadataGraphColor[]>(this.APIUrl+'GetMetadata_graphColor?condition='+cd); //can use flask
   }
   
   gerMetadataBProduction(cd: string) {
@@ -89,19 +89,19 @@ export class ServiceService {
 //#region for Physical data
 
   getPhysicalData(): Observable<Physical[]> {
-    return this.http.get<Physical[]>(this.APIUrl+'GetPhysicaldata');
+    return this.http.get<Physical[]>(this.APIUrl+'GetPhysicaldata'); //can use flask
   }
 
   addPhysical(addPhysicalRequest:Physical): Observable<Physical> {
-    return this.http.post<Physical>(this.APIUrl+'AddPhysical', addPhysicalRequest);
+    return this.http.post<Physical>(this.APIUrl+'AddPhysical', addPhysicalRequest); //can use flask
   }
 
   updatePhysical(updatePhysicalRequest: Physical): Observable<Physical>{
-    return this.http.put<Physical>(this.APIUrl+'UpdatePhysical', updatePhysicalRequest);
+    return this.http.put<Physical>(this.APIUrl+'UpdatePhysical', updatePhysicalRequest); //can use flask
   }
 
   deletePhysical(deletedID: string): Observable<Metadata>{
-    return this.http.delete<Metadata>(this.APIUrl+'DeletePhysical?condition='+deletedID);
+    return this.http.delete<Metadata>(this.APIUrl+'DeletePhysical?condition='+deletedID); //can use flask
   }
 
 //#endregion

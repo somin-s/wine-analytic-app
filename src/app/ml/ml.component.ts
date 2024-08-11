@@ -109,8 +109,8 @@ export class MlComponent {
     this.chartOption1 = 
     {
        chart: { type: 'scatter'},//, zoomType: 'xy'},
-       title:{ text: 'Based on yield per wine'},
-       subtitle: { text: 'Quality/Value'},
+       title:{ text: 'Quality based on yield per wine'},
+       subtitle: { text: ''},
        accessibility: {
           announceNewData: {
               enabled: false
@@ -148,8 +148,8 @@ export class MlComponent {
     this.chartOption2 = 
     {
       chart: { type: 'scatter'},//, zoomType: 'xy'},
-      title:{ text: 'based on yield per metre'},
-      subtitle: { text: 'Quality/Value'},
+      title:{ text: 'Quality based on yield per metre'},
+      subtitle: { text: ''},
       accessibility: {
         announceNewData: {
           enabled: false
@@ -162,8 +162,8 @@ export class MlComponent {
     this.chartOption3 = 
     {
       chart: { type: 'scatter'},//, zoomType: 'xy'},
-      title:{ text: 'Based on yield per square metre'},
-      subtitle: { text: 'Quality/Value'},
+      title:{ text: 'Quality based on yield per square metre'},
+      subtitle: { text: ''},
       accessibility: {
         announceNewData: {
           enabled: false
@@ -176,8 +176,8 @@ export class MlComponent {
     this.chartOption4 = 
     {
       chart: { type: 'scatter'},//, zoomType: 'xy'},
-      title:{ text: 'Based on berry weight per square metre'},
-      subtitle: { text: 'Quality/Value'},
+      title:{ text: 'Quality based on berry weight per square metre'},
+      subtitle: { text: ''},
       accessibility: {
         announceNewData: {
           enabled: false

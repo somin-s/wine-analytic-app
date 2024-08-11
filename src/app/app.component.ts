@@ -19,14 +19,14 @@ export class AppComponent {
 
   menuItems = signal<MenuItem[]>([
     {
-      icon: 'hub',
-      label: 'Predicting model',
-      route: 'ml',
-    },
-    {
       icon: 'dashboard',
       label: 'Dashboard',
       route: 'dashboard',
+    },
+    {
+      icon: 'hub',
+      label: 'Predicting model',
+      route: 'ml',
     },
     {
       icon: 'language',

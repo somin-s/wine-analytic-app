@@ -9,9 +9,9 @@ import { MlComponent } from './ml/ml.component';
 
 const routes: Routes = [
   //{ path: '',component: DashboardComponent },
-  { path: '',component: MlComponent },
-  { path: 'ml',component: MlComponent },
+  { path: '',component: DashboardComponent },
   { path: 'dashboard',component: DashboardComponent },
+  { path: 'ml',component: MlComponent },
  //{path: 'login',component: LoginComponent},
   { path: 'ArcGis',component: ArcGisComponent },
   { path: 'DataSet',component: DatasetComponent },
