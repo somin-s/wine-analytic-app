@@ -59,7 +59,8 @@ export class MlComponent {
   @ViewChild(MatSort) sort!: MatSort;
 
   ngOnInit(){
-    this.onSubmit();
+    //this.onSubmit();
+    this.Initial();
   }
 
   // loading() {
@@ -68,8 +69,36 @@ export class MlComponent {
 
   // }
   loaded = false;
+  Initial() {
+    this.loaded = true;
+    const qData1 = [{data:[[4.49,3.00]]},{data:[[5.00,3.58]]},{data:[[4.99,3.00]]},{data:[[4.19,3.18]]},{data:[[1.69,4.44]]},
+    {data:[[5.19,3.50]]},{data:[[5.01,3.68]]},{data:[[4.80,3.10]]},{data:[[4.29,3.28]]},{data:[[1.69,4.59]]},
+    {data:[[5.00,3.60]]},{data:[[4.56,3.48]]},{data:[[4.75,3.51]]},{data:[[4.39,3.38]]},{data:[[1.69,4.58]]},
+    {data:[[4.99,3.40]]},{data:[[4.91,3.52]]},{data:[[4.34,3.98]]},{data:[[4.49,3.58]]},{data:[[1.69,4.58]]}];
+    
+    const qData2 = [{data:[[4.49,3.00]]},{data:[[5.00,3.58]]},{data:[[4.99,3.00]]},{data:[[4.19,3.18]]},{data:[[2.69,4.44]]},
+    {data:[[5.19,3.50]]},{data:[[5.01,3.68]]},{data:[[4.80,3.10]]},{data:[[4.29,3.28]]},{data:[[2.69,4.59]]},
+    {data:[[5.00,3.60]]},{data:[[4.56,3.48]]},{data:[[4.75,3.51]]},{data:[[4.39,3.38]]},{data:[[2.19,4.58]]},
+    {data:[[4.99,3.40]]},{data:[[4.91,3.52]]},{data:[[4.34,3.98]]},{data:[[4.49,3.58]]},{data:[[2.19,4.58]]}];
+
+    const qData3 = [{data:[[4.49,3.00]]},{data:[[5.00,3.58]]},{data:[[4.99,3.00]]},{data:[[4.19,3.18]]},{data:[[2.19,4.44]]},
+    {data:[[5.19,3.50]]},{data:[[5.01,3.68]]},{data:[[4.80,3.10]]},{data:[[4.29,3.28]]},{data:[[2.69,4.59]]},
+    {data:[[5.00,3.60]]},{data:[[4.56,3.48]]},{data:[[4.75,3.51]]},{data:[[4.39,3.38]]},{data:[[2.79,4.58]]},
+    {data:[[4.99,3.40]]},{data:[[4.91,3.52]]},{data:[[4.34,3.98]]},{data:[[4.49,3.58]]},{data:[[2.89,4.58]]}];
+
+    const qData4 = [{data:[[4.49,3.00]]},{data:[[5.00,3.58]]},{data:[[4.99,3.00]]},{data:[[4.19,3.18]]},{data:[[2.69,4.44]]},
+    {data:[[5.19,3.50]]},{data:[[5.01,3.68]]},{data:[[4.80,3.10]]},{data:[[4.29,3.28]]},{data:[[2.19,4.59]]},
+    {data:[[5.00,3.60]]},{data:[[4.56,3.48]]},{data:[[4.75,3.51]]},{data:[[4.39,3.38]]},{data:[[2.29,4.58]]},
+    {data:[[4.99,3.40]]},{data:[[4.91,3.52]]},{data:[[4.34,3.98]]},{data:[[4.49,3.58]]},{data:[[2.39,4.58]]}];
+
+    this.renderTopLeftChart(qData1);
+    this.renderTopRightChart(qData2);
+    this.renderBottomLeftChart(qData3);
+    this.renderBottomRightChart(qData4);
+  }
 
   onSubmit() {
+    this.loaded = false;
     //if (!this.loaded) this.loading();
     this.service.classifyAIModel(this.slider).subscribe(dt=>{
       this.loaded = true;
